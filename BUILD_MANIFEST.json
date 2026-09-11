@@ -1,0 +1,13 @@
+{
+  "project": "FZ247 Deploy Hub",
+  "version": "1.0.0",
+  "archive": "FZ247-Deploy-Hub-v1.0.0.zip",
+  "sha256": "fc686e227d258e1c61d05b038df98bc1c1703a5deb240e7950bff58ee3c18f07",
+  "files": 39,
+  "verified": [
+    "Node scripts pass node --check",
+    "Required application/database/config files are present",
+    "No node_modules/.next/.vercel artifacts included"
+  ],
+  "note": "npm install/build could not be executed in this environment because the package registry operation timed out; deploy/build should be run by Vercel after dependency installation."
+}

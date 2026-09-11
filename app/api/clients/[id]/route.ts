@@ -1,0 +1,2 @@
+import {NextResponse} from "next/server"; import {query} from "@/lib/db"; import {requireUser} from "@/lib/guards";
+export async function DELETE(_:Request,{params}:{params:Promise<{id:string}>}){try{await requireUser();const {id}=await params;const r=await query("delete from clients where id=$1 returning id",[id]);if(!r.rowCount)return NextResponse.json({error:"Client not found."},{status:404});return NextResponse.json({ok:true});}catch(e){return NextResponse.json({error:e instanceof Error?e.message:"Delete failed"},{status:500});}}
